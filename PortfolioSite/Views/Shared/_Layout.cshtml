@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <img src="~/Content/DW Header1.jpg" />
+        <h1>Where Whovians Can Network Together</h1>
+        <style>
+            body {
+                background: blue;
+                color: black;
+            }
+        </style>
+        <nav>
+            <ul>
+                <li>
+                    <a href="@Url.Action("Index","Home")">
+                        Home
+                    </a>
+                </li>
+                <li>
+                     <a href="@Url.Action("About","Home")">
+                        About Me
+                     </a>
+                </li>
+                <li>
+                     <a href="@Url.Action("Work","Home")">
+                        Work
+                     </a>
+                </li>
+                <li>
+                     <a href="@Url.Action("Contact","Home")">
+                        Contact
+                     </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
